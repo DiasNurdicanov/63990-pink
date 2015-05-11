@@ -1,11 +1,15 @@
 @font-family:'Open Sans', sans-serif;
+@base-color:#283645;
 
-.font(@font-size:16px; @font-weight:normal; @text-color: black; @line-height:14px; @text-align:left;){
+.font(@font-size:16px; @font-weight:normal; @text-color: black; @line-height:14px;){
 	font-size: @font-size;
 	font-weight: @font-weight;
 	color: @text-color;
 	line-height: @line-height;
-	text-align: @text-align;
+}
+
+*:focus{
+	outline: none;
 }
 
 body{
@@ -42,7 +46,7 @@ body{
 	right:20px;
 }
 .mobile-menu{
-	background: #283645;
+	background: @base-color;
 	position: absolute;
 	left: 0;
 	top:67px;
@@ -68,11 +72,12 @@ body{
 	}
 }
 .page-title{
-	.font(24px;300;white;auto;center);
+	.font(24px;300;white;auto;);
 	margin: 0;
 	background: url("../img/bg_header.jpg") no-repeat;
 	padding: 20px;
 	padding-top: 80px;
+	text-align: center;
 
 	&--big{
 		height:486px;
@@ -82,6 +87,7 @@ body{
 .mobile-app{
 	background: #1d2631;
 	padding: 30px 20px;
+	text-align: center;
 
 	&__logos{
 		font-size: 0;
@@ -89,7 +95,7 @@ body{
 		margin: 25px 0;
 	}
 	&__link-down{
-		.font(18px;700;white;20px;center;);
+		.font(18px;700;white;20px;);
 		
 		display: block;
 		border: 3px solid white;
@@ -105,14 +111,14 @@ body{
 		width: 46px;
 	}
 	&__info{
-		.font(14px;300;white;24px;center;)
+		.font(14px;300;white;24px;)
 	}
 }
 .information{
 	position: relative;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
-	
+	text-align: center;
 	&:after{
 		content: '';
 		display: block;
@@ -125,19 +131,147 @@ body{
 		z-index: -1;
 	}
 	&__text{
-		.font(24px; 300; #283645; auto; center;);
+		.font(24px; 300; @base-color; auto;);
 	}
 }
 .features{
 	background: #f2f2f2;
-	padding: 20px;
-	padding-top: 25px;
+	padding: 25px 20px;
+	padding-bottom: 0;
+
+	&:after{
+		content: '';
+		display: block;
+		background: url('../img/iphone.png') no-repeat center;
+		height: 279px;
+		margin-top: 30px;
+	}
 }
 .features-item{
+	text-align: center;
 	&__title{
-		.font(18px; 700; black; 24px; center;)
+		.font(18px; 700; black; 24px;)
 	}
 	&__text{
-		.font(14px;400;#283645;24px;center;)
+		.font(14px;400;@base-color;24px;)
+	}
+}
+.review{
+	text-align: center;
+	&__title{
+		.font(18px; 700; black; 30px;);
+	}
+	&__text{
+		.font(14px; 400; @base-color; 30px;)
+	}
+}
+.pages{
+	padding: 40px 0;
+
+	&__list{
+		margin: 0;
+		padding: 0;
+		list-style:none;
+		font-size: 0;
+		text-align: center;
+	}
+	&__item{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 15px;
+	}
+	&__link{
+		display: block;
+		background: #bec2c7;
+		border-radius: 50%;
+		height: 6px;
+		width: 6px;
+	}
+	&__link--active{
+		background: #fff;
+		border:3px solid @base-color;
+	}
+}
+.slider--grey{
+	background: #f2f2f2;
+	position: relative;
+	margin-top: 30px;
+	padding-top: 50px;
+
+	&:before{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 30px;
+		transform: skewY(-5deg);
+		background: #f2f2f2;
+		position: absolute;
+		top: -15px;
+		z-index: -1;
+	}
+}
+.tarif{
+	width: 275px;
+	margin:0 20px;
+
+	&__list{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	&__title{
+		padding: 20px 0;
+		background: @base-color;
+		text-align: center;
+		.font(24px; 300; white; 30px;)
+	}
+	&__name{
+		display: block;
+		.font(18px; 700; white; 30px;);
+	}
+	&--hit{
+		position: relative;
+
+		&:before{
+			content: '';
+			display: block;
+			width: 74px;
+			height: 73px;
+			background: url('../img/tarif_hit.png') no-repeat;
+			position: absolute;
+			left: -2px;
+			top: 0;
+		}
+	}
+	&__item{
+		background: #fff;
+		padding: 15px 20px;
+		margin-bottom: 2px;
+		.font(14px; 400; @base-color; 30px;)
+	}
+	&__item--selected{
+		background: #fff url('../img/selected.png') no-repeat 230px;
+	}
+	&__item--nonselected{
+		background: #fff url('../img/non-selected.png') no-repeat 230px;
+	}
+}
+.page-footer{
+	text-align: center;
+	&__title{
+		.font(24px; 300; @base-color; auto;);
+	}
+}
+.contacts{
+	padding: 0 20px;
+	
+	&__title{
+		.font(18px;700; @base-color; auto;);
+		margin: 0;
+	}
+	&__text{
+		.font(24px;300; #d22856; auto;);
+		margin: 0;
+		margin-bottom: 25px;
 	}
 }
