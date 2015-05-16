@@ -212,9 +212,9 @@ body{
 }
 .slider--grey{
 	background: #f2f2f2;
-	position: relative;
 	margin-top: 30px;
 	padding-top: 50px;
+	min-height: 286px;
 
 	&:before{
 		content: '';
@@ -228,11 +228,28 @@ body{
 		z-index: -1;
 	}
 }
+.slider{
+	position: relative;
+
+	&__inner{
+		position: relative;
+		overflow: hidden;
+		min-height:286px;
+	}
+}
 .tarif{
 	display: inline-block;
 	vertical-align: top;
+	position: absolute;
 	width: 86%;
 	margin: 0 7%;
+		
+	&:first-of-type{
+		left:-87%;
+	}
+	&:nth-of-type(3){
+		right:-87%;
+	}
 
 	&__list{
 		padding: 0;
@@ -243,16 +260,15 @@ body{
 		padding: 20px 0;
 		background: @base-color;
 		text-align: center;
-		.font(24px; 300; white; 30px;)
+		.font(24px; 300; white; 30px;);
+		position: relative;
 	}
 	&__name{
 		display: block;
 		.font(18px; 700; white; 30px;);
 	}
 	&--hit{
-		position: relative;
-		top:0;
-
+		
 		&:before{
 			content: '';
 			display: block;
@@ -262,6 +278,7 @@ body{
 			position: absolute;
 			left: -2px;
 			top: 0;
+			z-index: 1;
 		}
 	}
 	&__item{
