@@ -104,6 +104,13 @@ body{
 		display: block;
 		padding: 15px 0;
 		text-decoration: none;
+
+		&:hover{
+			color:#d22856;
+		}
+		&:active{
+			opacity: 0.5;
+		}
 	}
 }
 .mobile-app{
@@ -124,6 +131,14 @@ body{
 		border-radius: 30px;
 		padding: 15px 0;
 		text-decoration: none;
+
+		&:hover{
+			background: #fff;
+			color:#d8456d;
+		}
+		&:active{
+			color:#f1becc;
+		}
 	}
 	&__link{
 		display: inline-block;
@@ -217,10 +232,26 @@ body{
 		border-radius: 50%;
 		height: 6px;
 		width: 6px;
+
+		&:hover{
+			background: #7e868f;
+		}
+
+		&:active{
+			background: #e9ebec;
+		}
 	}
 	&__link--active{
 		background: #fff;
 		border:3px solid @base-color;
+
+		&:hover{
+			background: #fff;
+		}
+
+		&:active{
+			background: #fff;
+		}
 	}
 }
 .slider--grey{
@@ -365,9 +396,17 @@ body{
 	vertical-align: top;
 	width:50px;
 	height: 50px;
-	border: 2px solid #e9ebec;
+	border: 3px solid #e9ebec;
 	border-radius:50%;
 	margin-right: 12px;
+
+	&:hover{
+		border-color: #283645;
+	}
+	&:active{
+		border-color: #e9ebec;
+		opacity: 0.5;
+	}
 
 	&--tw{
 		background: url(../img/tw.png) no-repeat 50%;
@@ -645,6 +684,14 @@ input[type="file"]{
 	margin-bottom: 70px;
 	cursor: pointer;
 	position: relative;
+
+	&:hover{
+		border-color:#283645;
+	}
+	&:active{
+		background: #283645;
+		color:#fff;
+	}
 }
 .upload:after{
 	content: "";
@@ -705,6 +752,14 @@ input[type="file"]{
 		border-radius: 3px;
 		text-transform: uppercase;
 		font-family: @font-family;
+		transition:all 0.2s linear;
+
+		&:hover{
+			background:#1c9b5e;
+		}
+		&:active{
+			color:rgba(255, 255, 255, 0.3);
+		}
 	}
 }
 .note{
@@ -977,7 +1032,7 @@ input[type="file"]{
 			display: block;
 			width: 28px;
 			height: 26px;
-			background: url(../img/blog_before.png) no-repeat;
+			background: url(../img/blog-post-icon.svg) no-repeat;
 			left:-60px;
 			top:5px;
 		}
@@ -1210,6 +1265,9 @@ input[type="file"]{
 		}
 
 	}
+	.mobile-menu{
+		top:110px;
+	}
 }
 /* Стили для desktop */
 @media (min-width: 941px) {
@@ -1221,6 +1279,8 @@ input[type="file"]{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;	
+		position: relative;
+		z-index: 1;
 	}
 	.open-menu-btn{
 		display: none;
@@ -1249,6 +1309,15 @@ input[type="file"]{
 		&__link{
 			font-weight: 400;
 			line-height: 18px;
+
+			&:hover{
+				border-bottom: 3px solid #fff;
+				color:#fff;
+			}
+			&:active{
+				color:#596470;
+				border-bottom: none;
+			}
 		}
 	}
 	.page-header{
