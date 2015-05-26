@@ -12,246 +12,251 @@
 	<header class="page-header">
 		<div class="page-header__wrap">
 			<div class="page-header-top">
-				<div class="logo">
-					<a class="logo__link" href="index.html">
-						<img src="img/glasses.png" alt="logo" class="logo__img">
-						<span class="logo__title">Pink</span>
-					</a>
-				</div>
-				<button class="open-menu-btn"></button>
-				<div class="mobile-menu">
-					<ul class="mobile-menu__list">
-						<li class="mobile-menu__item"><a class="mobile-menu__link" href="">Информация</a></li>
-						<li class="mobile-menu__item"><a class="mobile-menu__link" href="">Возможности</a></li>
-						<li class="mobile-menu__item"><a class="mobile-menu__link" href="">Отзывы</a></li>
-						<li class="mobile-menu__item"><a class="mobile-menu__link" href="">Стоимость</a></li>
-					</ul>
+				<div class="container">
+					<div class="logo logo--left">
+						<a class="logo__link" href="index.html">
+							<img src="img/glasses.png" alt="logo" class="logo__img">
+							<span class="logo__title">Pink</span>
+						</a>
+					</div>
+					<button class="open-menu-btn"></button>
+					<div class="mobile-menu">
+						<ul class="mobile-menu__list">
+							<li class="mobile-menu__item"><a class="mobile-menu__link" href="">Информация</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__link" href="">Возможности</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__link" href="">Отзывы</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__link" href="">Стоимость</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-
-			<h1 class="page-title">Конкурс на самое безбашеное путешествие с Пинк</h1>	
+			<div class="container">
+				<h1 class="page-title">Конкурс на самое безбашеное путешествие с Пинк</h1>	
+			</div>
 		</div>
 	</header>
 
-	<div class="form">
-		<form action="">
-			<p class="form-title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>	
-			
-			<div class="wrap">
-				<div class="form-row">
-					<label for="name" class="form-row__title">Имя:*</label>
-					<input type="text" id="name" placeholder="Введите ваше имя">
-				</div>
-				<div class="form-row">
-					<label for="last-name" class="form-row__title">Фамилия: *</label>
-					<input type="text" id="last-name" placeholder="Укажите фамилию">
-				</div>
-				<div class="form-row">
-					<label for="patronymic" class="form-row__title">Отечетво:</label>
-					<input type="text" id="patronymic" placeholder="Ну и отчетсво тоже">
-				</div>
-			</div>
+	<div class="container">
+		<div class="form">
+			<form action="">
+				<p class="form-title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>	
 				
-			
-			<div class="wrap wrap--grey">
-				<div class="wrap__title">
-					С каким приложением путешествовали? *
+				<div class="wrap">
+					<div class="form-row">
+						<label for="name" class="form-row__title">Имя:*</label>
+						<input type="text" id="name" placeholder="Введите ваше имя">
+					</div>
+					<div class="form-row">
+						<label for="last-name" class="form-row__title">Фамилия: *</label>
+						<input type="text" id="last-name" placeholder="Укажите фамилию">
+					</div>
+					<div class="form-row">
+						<label for="patronymic" class="form-row__title">Отечетво:</label>
+						<input type="text" id="patronymic" placeholder="Ну и отчетсво тоже">
+					</div>
 				</div>
-				<div class="form-row">
-					<input type="radio" name="os" id="ios">
-					<label for="ios" class="form-row__title form-row__title--big">Pink для iOS</label>
+					
+				
+				<div class="wrap wrap--grey">
+					<div class="wrap__title">
+						С каким приложением путешествовали? *
+					</div>
+					<div class="form-row">
+						<input type="radio" name="os" id="ios">
+						<label for="ios" class="form-row__title form-row__title--big">Pink для iOS</label>
+					</div>
+					<div class="form-row">
+						<input type="radio" name="os" id="android">
+						<label for="android" class="form-row__title form-row__title--big">Pink на Android</label>
+					</div>
+					<div class="form-row">
+						<input type="radio" name="os" id="wp">
+						<label for="wp" class="form-row__title form-row__title--big">Windows Phone</label>
+					</div>
 				</div>
-				<div class="form-row">
-					<input type="radio" name="os" id="android">
-					<label for="android" class="form-row__title form-row__title--big">Pink на Android</label>
+				
+				<div class="wrap">	
+					<div class="wrap__title">
+						Когда вы путешествовали? *
+					</div>
+					<div class="form-row">
+						<input type="text" placeholder="1 апреля 2015">
+						<div class="form-row__title">
+							Дата выезда
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-row__content">
+							<button class="minus">-</button>
+							<input type="text" placeholder="10 дней" class="form-row__count">
+							<button class="plus">+</button>
+						</div>
+						<div class="form-row__title">
+							Продолжительность
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="form-row_content">
+							<input type="text" disabled  value="1 апреля 2015">
+						</div>
+						<div class="form-row__title">
+							Дата возвращения
+						</div>
+					</div>	
 				</div>
-				<div class="form-row">
-					<input type="radio" name="os" id="wp">
-					<label for="wp" class="form-row__title form-row__title--big">Windows Phone</label>
+					
+
+				<div class="wrap wrap--grey">
+					<div class="wrap__title">
+							Количество попутчиков *
+						</div>
+					<div class="form-row form-row--min">
+						<div class="form-row__content">
+							<button class="minus">-</button>
+							<input type="text" disabled class="form-row__count" value="2 чел">
+							<button class="plus">+</button>
+						</div>
+					</div>
+					<div class="traveler">
+						<div class="left-col">
+							<div class="col-title">
+								№
+							</div>
+							<div class="traveler-number">
+								1
+							</div>
+						</div>
+						<div class="middle-col">
+							<div class="form-row">
+								<label for="traveler-name" class="form-row__title">Имя: *</label>
+								<input type="text" placeholder="Введите ваше имя" id="traveler-name">
+							</div>
+							<div class="form-row">
+								<label for="traveler-nick" class="form-row__title">Прозвище:</label>
+								<input type="text" placeholder="Ну как же без этого!" id="traveler-nick">
+							</div>
+						</div>
+						<div class="right-col">
+							<button class="delete">Удалить</button>
+						</div>
+					</div>
+					<div class="traveler">
+						<div class="left-col">
+							<div class="col-title">
+								№
+							</div>
+							<div class="traveler-number">
+								2
+							</div>
+						</div>
+						<div class="middle-col">
+							<div class="form-row">
+								<label for="traveler-name2" class="form-row__title">Имя: *</label>
+								<input type="text" placeholder="Введите ваше имя" id="traveler-name2">
+							</div>
+							<div class="form-row">
+								<label for="traveler-nick2" class="form-row__title">Прозвище:</label>
+								<input type="text" placeholder="Ну как же без этого!" id="traveler-nick2">
+							</div>
+						</div>
+						<div class="right-col">
+							<button class="delete">Удалить</button>
+						</div>
+					</div>
 				</div>
-			</div>
-			
-			<div class="wrap">	
-				<div class="wrap__title">
-					Когда вы путешествовали? *
-				</div>
-				<div class="form-row">
-					<input type="text" placeholder="1 апреля 2015">
-					<div class="form-row__title">
-						Дата выезда
+				<div class="wrap">
+					<div class="wrap__title">
+						Ваши безбашенные достижения в путешествии
+					</div>
+					<div class="form-row">
+						<input type="checkbox" id="selfie">
+						<label for="selfie" class="form-row__title form-row__title--big">Сделал селфи с акулой</label>
+					</div>
+					<div class="form-row">
+						<input type="checkbox" id="beach">
+						<label for="beach" class="form-row__title form-row__title--big">Обгорел на пляже</label>
+					</div>
+					<div class="form-row">
+						<input type="checkbox" id="chuck">
+						<label for="chuck" class="form-row__title form-row__title--big">Видел Чака Норриса</label>
+					</div>
+					<div class="form-row">
+						<input type="checkbox" id="buy">
+						<label for="buy" class="form-row__title form-row__title--big">Накупил сувениров</label>
+					</div>
+					<div class="form-row">
+						<input type="checkbox" id="tower">
+						<label for="tower" class="form-row__title form-row__title--big">Удержал башню</label>
+					</div>
+					<div class="form-row">
+						<input type="checkbox" id="hotel">
+						<label for="hotel" class="form-row__title form-row__title--big">Разгромил отель</label>
 					</div>
 				</div>
 
-				<div class="form-row">
-					<div class="form-row__content">
-						<button class="minus">-</button>
-						<input type="text" placeholder="10 дней" class="form-row__count">
-						<button class="plus">+</button>
+				<div class="wrap wrap--grey">
+					<div class="wrap__title">
+						Ваши фотографии из поездки *
 					</div>
-					<div class="form-row__title">
-						Продолжительность
-					</div>
-				</div>
-				
-				<div class="form-row">
-					<div class="form-row_content">
-						<input type="text" disabled  value="1 апреля 2015">
-					</div>
-					<div class="form-row__title">
-						Дата возвращения
-					</div>
-				</div>	
-			</div>
-				
-
-			<div class="wrap wrap--grey">
-				<div class="wrap__title">
-						Количество попутчиков *
-					</div>
-				<div class="form-row form-row--min">
-					<div class="form-row__content">
-						<button class="minus">-</button>
-						<input type="text" disabled class="form-row__count" value="2 чел">
-						<button class="plus">+</button>
-					</div>
-				</div>
-				<div class="traveler">
-					<div class="left-col">
-						<div class="col-title">
-							№
-						</div>
-						<div class="traveler-number">
-							1
-						</div>
-					</div>
-					<div class="middle-col">
-						<div class="form-row">
-							<label for="traveler-name" class="form-row__title">Имя: *</label>
-							<input type="text" placeholder="Введите ваше имя" id="traveler-name">
-						</div>
-						<div class="form-row">
-							<label for="traveler-nick" class="form-row__title">Прозвище:</label>
-							<input type="text" placeholder="Ну как же без этого!" id="traveler-nick">
-						</div>
-					</div>
-					<div class="right-col">
-						<button class="delete">Удалить</button>
+					
+					<input type="file" id="download">
+					<label for="download" class="upload">Загрузить фото</label>
+					
+					<div class="foto-wrap">
+						<figure class="foto">
+							<button class="foto__close"></button>
+							<img src="img/foto-1.jpg" alt="" class="foto__img">
+							<figcaption class="foto__name">img-1.jpg</figcaption>
+						</figure>
+						<figure class="foto">
+							<button class="foto__close"></button>
+							<img src="img/foto-1.jpg" alt=""  class="foto__img">
+							<figcaption class="foto__name">img-2.jpg</figcaption>
+						</figure>
+						<figure class="foto">
+							<button class="foto__close"></button>
+							<img src="img/foto-1.jpg" alt=""  class="foto__img">
+							<figcaption class="foto__name">img-3.jpg</figcaption>
+						</figure>
+						<figure class="foto">
+							<button class="foto__close"></button>
+							<img src="img/foto-1.jpg" alt=""  class="foto__img">
+							<figcaption class="foto__name">img-4.jpg</figcaption>
+						</figure>
+						<figure class="foto">
+							<button class="foto__close"></button>
+							<img src="img/foto-1.jpg" alt=""  class="foto__img">
+							<figcaption class="foto__name">img-5.jpg</figcaption>
+						</figure>
+						<figure class="foto">
+							<button class="foto__close"></button>
+							<img src="img/foto-1.jpg" alt=""  class="foto__img">
+							<figcaption class="foto__name">img-6.jpg</figcaption>
+						</figure>
+						<figure class="foto">
+							<button class="foto__close"></button>
+							<img src="img/foto-1.jpg" alt=""  class="foto__img">
+							<figcaption class="foto__name">img-7.jpg</figcaption>
+						</figure>
+						<figure class="foto">
+							<button class="foto__close"></button>
+							<img src="img/foto-1.jpg" alt=""  class="foto__img">
+							<figcaption class="foto__name">img-8.jpg</figcaption>
+						</figure>
 					</div>
 				</div>
-				<div class="traveler">
-					<div class="left-col">
-						<div class="col-title">
-							№
-						</div>
-						<div class="traveler-number">
-							2
-						</div>
-					</div>
-					<div class="middle-col">
-						<div class="form-row">
-							<label for="traveler-name2" class="form-row__title">Имя: *</label>
-							<input type="text" placeholder="Введите ваше имя" id="traveler-name2">
-						</div>
-						<div class="form-row">
-							<label for="traveler-nick2" class="form-row__title">Прозвище:</label>
-							<input type="text" placeholder="Ну как же без этого!" id="traveler-nick2">
-						</div>
-					</div>
-					<div class="right-col">
-						<button class="delete">Удалить</button>
-					</div>
+					
+				<div class="wrap">	
+					<button class="btn btn--green" type="submit">Отправить форму</button>
+					<p class="note"><span class="pink">*</span> - Обязательные поля</p>
 				</div>
-			</div>
-			<div class="wrap">
-				<div class="wrap__title">
-					Ваши безбашенные достижения в путешествии
-				</div>
-				<div class="form-row">
-					<input type="checkbox" id="selfie">
-					<label for="selfie" class="form-row__title form-row__title--big">Сделал селфи с акулой</label>
-				</div>
-				<div class="form-row">
-					<input type="checkbox" id="beach">
-					<label for="beach" class="form-row__title form-row__title--big">Обгорел на пляже</label>
-				</div>
-				<div class="form-row">
-					<input type="checkbox" id="chuck">
-					<label for="chuck" class="form-row__title form-row__title--big">Видел Чака Норриса</label>
-				</div>
-				<div class="form-row">
-					<input type="checkbox" id="buy">
-					<label for="buy" class="form-row__title form-row__title--big">Накупил сувениров</label>
-				</div>
-				<div class="form-row">
-					<input type="checkbox" id="tower">
-					<label for="tower" class="form-row__title form-row__title--big">Удержал башню</label>
-				</div>
-				<div class="form-row">
-					<input type="checkbox" id="hotel">
-					<label for="hotel" class="form-row__title form-row__title--big">Разгромил отель</label>
-				</div>
-			</div>
-
-			<div class="wrap wrap--grey">
-				<div class="wrap__title">
-					Ваши фотографии из поездки *
-				</div>
-				
-				<input type="file" id="download">
-				<label for="download" class="upload">Загрузить фото</label>
-				
-				<div class="foto-wrap">
-					<figure class="foto">
-						<button class="foto__close"></button>
-						<img src="img/foto-1.jpg" alt="" class="foto__img">
-						<figcaption class="foto__name">img-1.jpg</figcaption>
-					</figure>
-					<figure class="foto">
-						<button class="foto__close"></button>
-						<img src="img/foto-1.jpg" alt=""  class="foto__img">
-						<figcaption class="foto__name">img-2.jpg</figcaption>
-					</figure>
-					<figure class="foto">
-						<button class="foto__close"></button>
-						<img src="img/foto-1.jpg" alt=""  class="foto__img">
-						<figcaption class="foto__name">img-3.jpg</figcaption>
-					</figure>
-					<figure class="foto">
-						<button class="foto__close"></button>
-						<img src="img/foto-1.jpg" alt=""  class="foto__img">
-						<figcaption class="foto__name">img-4.jpg</figcaption>
-					</figure>
-					<figure class="foto">
-						<button class="foto__close"></button>
-						<img src="img/foto-1.jpg" alt=""  class="foto__img">
-						<figcaption class="foto__name">img-5.jpg</figcaption>
-					</figure>
-					<figure class="foto">
-						<button class="foto__close"></button>
-						<img src="img/foto-1.jpg" alt=""  class="foto__img">
-						<figcaption class="foto__name">img-6.jpg</figcaption>
-					</figure>
-					<figure class="foto">
-						<button class="foto__close"></button>
-						<img src="img/foto-1.jpg" alt=""  class="foto__img">
-						<figcaption class="foto__name">img-7.jpg</figcaption>
-					</figure>
-					<figure class="foto">
-						<button class="foto__close"></button>
-						<img src="img/foto-1.jpg" alt=""  class="foto__img">
-						<figcaption class="foto__name">img-8.jpg</figcaption>
-					</figure>
-				</div>
-			</div>
-				
-			<div class="wrap">	
-				<button class="btn btn--green" type="submit">Отправить форму</button>
-				<p class="note"><span class="pink">*</span> - Обязательные поля</p>
-			</div>
-		</form>
+			</form>
+		</div>
 	</div>
 
-	<footer class="main-footer">
+	<footer class="main-footer container">
 		<div class="logo">
 			<a class="logo__link" href="index.html">
 				<img src="img/footer-logo.png" alt="logo">
