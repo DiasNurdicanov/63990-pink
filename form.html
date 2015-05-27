@@ -15,8 +15,11 @@
 				<div class="container">
 					<div class="logo logo--left">
 						<a class="logo__link" href="index.html">
-							<img src="img/glasses.png" alt="logo" class="logo__img">
-							<span class="logo__title">Pink</span>
+							<picture>
+								<source media="(min-width:941px)" srcset="img/logotype-white-desktop.svg">
+								<source media="(min-width:481px)" srcset="img/logotype-white-tablet.svg">
+								<img src="img/logotype-white-mobile.svg">
+							</picture>
 						</a>
 					</div>
 					<button class="open-menu-btn"></button>
@@ -88,9 +91,9 @@
 
 					<div class="form-row">
 						<div class="form-row__content">
-							<button class="minus">-</button>
+							<button type="button" class="minus">-</button>
 							<input type="text" placeholder="10 дней" class="form-row__count">
-							<button class="plus">+</button>
+							<button type="button" class="plus">+</button>
 						</div>
 						<div class="form-row__title">
 							Продолжительность
@@ -114,9 +117,9 @@
 						</div>
 					<div class="form-row form-row--min">
 						<div class="form-row__content">
-							<button class="minus">-</button>
+							<button type="button" class="minus">-</button>
 							<input type="text" disabled class="form-row__count" value="2 чел">
-							<button class="plus">+</button>
+							<button type="button" class="plus">+</button>
 						</div>
 					</div>
 					<div class="traveler">
@@ -259,7 +262,10 @@
 	<footer class="main-footer container">
 		<div class="logo">
 			<a class="logo__link" href="index.html">
-				<img src="img/footer-logo.png" alt="logo">
+				<picture>
+					<source media="(min-width:941px)" srcset="img/logotype-blue-desktop.svg">
+					<img src="img/logotype-blue-tablet.svg">
+				</picture>
 			</a>
 		</div>
 		<div class="social-icons">
@@ -270,7 +276,7 @@
 		<div class="developer">
 			<div class="developer__text">Разработано</div>
 			<a href="" class="developer__link">
-				<img src="img/h-academy.png" alt="HTML Academy">
+				<img src="img/htmlacademy.svg" alt="HTML Academy">
 			</a>
 		</div>
 	</footer>
