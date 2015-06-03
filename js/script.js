@@ -1,3 +1,22 @@
+//Гамбургер
+(function() {
+
+	var btn = document.querySelector('.open-menu-btn');
+	var wrap = document.querySelector('.page-header');
+
+	btn.addEventListener("tap", function(){
+
+		if (wrap.classList.contains('js-open-menu') == false){
+			wrap.classList.add('js-open-menu');
+		}
+		else {
+			wrap.classList.remove('js-open-menu');
+		}
+	});
+
+
+})();
+
 //"Оживление" числовых полей
 (function() {
 
@@ -6,7 +25,7 @@
 
 	for (var i = 0; i < minus.length; i++) {
 
-		minus[i].addEventListener("click", function(){
+		minus[i].addEventListener("tap", function(){
 
 
 			event.preventDefault();
@@ -31,7 +50,7 @@
 
 	for (var i = 0; i < plus.length; i++) {
 
-		plus[i].addEventListener("click", function(){
+		plus[i].addEventListener("tap", function(){
 
 			event.preventDefault();
 

@@ -64,6 +64,7 @@ body{
 	&-top{
 		padding: 20px;
 		position: relative;
+		z-index: 1;
 		background-color: rgba(28,37,47,.3);
 		height: 65px;
 		box-sizing: border-box;
@@ -102,7 +103,7 @@ body{
 	background: @base-color;
 	position: absolute;
 	left: 0;
-	top:67px;
+	top:65px;
 	width:100%;
 	display: none;
 	
@@ -1334,7 +1335,6 @@ input[type="file"]{
 	.page-header-top{
 		padding: 25px 0 42px;
 		position: relative;
- 		z-index: 1;
 	}
 	.open-menu-btn{
 		display: none;
@@ -1655,5 +1655,17 @@ input[type="file"]{
 	}
 	.form-row--min{
 		width: 30%;
+	}
+}
+.js-open-menu{
+
+	.mobile-menu{
+		display: block;
+	}
+	.page-header-top{
+		background: #283645;
+	}
+	.open-menu-btn{
+		background: url('../img/menu-cross.svg') no-repeat center;
 	}
 }
