@@ -41,21 +41,21 @@
 
 	<div class="container">
 		<div class="form">
-			<form action="">
+			<form action="" class="worksheet">
 				<p class="form-title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>	
 				
 				<div class="wrap">
 					<div class="form-row">
 						<label for="name" class="form-row__title">Имя:*</label>
-						<input type="text" id="name" placeholder="Введите ваше имя">
+						<input name="name" type="text" id="name" placeholder="Введите ваше имя">
 					</div>
 					<div class="form-row">
 						<label for="last-name" class="form-row__title">Фамилия: *</label>
-						<input type="text" id="last-name" placeholder="Укажите фамилию">
+						<input name="last-name" type="text" id="last-name" placeholder="Укажите фамилию">
 					</div>
 					<div class="form-row">
 						<label for="patronymic" class="form-row__title">Отечетво:</label>
-						<input type="text" id="patronymic" placeholder="Ну и отчетсво тоже">
+						<input name="patronymic" type="text" id="patronymic" placeholder="Ну и отчетсво тоже">
 					</div>
 				</div>
 					
@@ -83,7 +83,7 @@
 						Когда вы путешествовали? *
 					</div>
 					<div class="form-row">
-						<input type="text" placeholder="1 апреля 2015">
+						<input name="departure" type="text" placeholder="1 апреля 2015">
 						<div class="form-row__title">
 							Дата выезда
 						</div>
@@ -91,9 +91,9 @@
 
 					<div class="form-row">
 						<div class="form-row__content">
-							<button type="button" class="minus">-</button>
-							<input type="text" placeholder="10 дней" class="form-row__count">
-							<button type="button" class="plus">+</button>
+							<button type="button" class="minus js-minus">-</button>
+							<input name="duration" type="text" value="10 дней" class="form-row__count">
+							<button type="button" class="plus js-plus">+</button>
 						</div>
 						<div class="form-row__title">
 							Продолжительность
@@ -102,7 +102,7 @@
 					
 					<div class="form-row">
 						<div class="form-row_content">
-							<input type="text" disabled  value="1 апреля 2015">
+							<input name="return" type="text" disabled  value="1 апреля 2015">
 						</div>
 						<div class="form-row__title">
 							Дата возвращения
@@ -117,9 +117,9 @@
 						</div>
 					<div class="form-row form-row--min">
 						<div class="form-row__content">
-							<button type="button" class="minus">-</button>
-							<input type="text" disabled class="form-row__count" value="2 чел">
-							<button type="button" class="plus">+</button>
+							<button type="button" class="minus js-minus">-</button>
+							<input name="traveler-count" type="text" disabled class="form-row__count" value="2 чел">
+							<button type="button" class="plus js-plus">+</button>
 						</div>
 					</div>
 					<div class="traveler">
@@ -134,15 +134,15 @@
 						<div class="middle-col">
 							<div class="form-row">
 								<label for="traveler-name" class="form-row__title">Имя: *</label>
-								<input type="text" placeholder="Введите ваше имя" id="traveler-name">
+								<input name="traveler-name" type="text" placeholder="Введите ваше имя" id="traveler-name">
 							</div>
 							<div class="form-row">
 								<label for="traveler-nick" class="form-row__title">Прозвище:</label>
-								<input type="text" placeholder="Ну как же без этого!" id="traveler-nick">
+								<input name="traveler-nick" type="text" placeholder="Ну как же без этого!" id="traveler-nick">
 							</div>
 						</div>
 						<div class="right-col">
-							<button class="delete">Удалить</button>
+							<button type="button" class="delete">Удалить</button>
 						</div>
 					</div>
 					<div class="traveler">
@@ -165,7 +165,7 @@
 							</div>
 						</div>
 						<div class="right-col">
-							<button class="delete">Удалить</button>
+							<button type="button" class="delete">Удалить</button>
 						</div>
 					</div>
 				</div>
@@ -280,3 +280,8 @@
 			</a>
 		</div>
 	</footer>
+
+	<script src="js/script.js"></script>
+
+</body>
+</html>
