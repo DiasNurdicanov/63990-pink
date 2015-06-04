@@ -1,11 +1,6 @@
 module.exports = function(grunt) {
 
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-githooks');
-  grunt.loadNpmTasks('grunt-lintspaces');
+  require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -13,7 +8,7 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          'css/style.css': 'less/style.less'
+          'build/css/style.css': 'source/less/style.less'
         }
       }
     },
@@ -46,6 +41,39 @@ module.exports = function(grunt) {
       }
     },
 
+    autoprefixer:{
+      options:{
+        browers: ["last 2 version", "ie 10"]
+      },
+      style: {
+        src: "build/css/style.css"
+      }
+    },
+
+    cssmin: {
+      style: {
+        options: {
+          keepSpecialComments: 0,
+          report: "gzip"
+        },
+        files: {
+          "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
+    },
+
+    imagemin: { 
+      images: { 
+        options: { 
+          optimizationLevel: 3 
+        }, 
+        files: [{ 
+          expand: true, 
+          src: ["build/img/**/*.{png,jpg,gif,svg}"] 
+        }] 
+      } 
+    },
+
     copy: {
       gosha: {
         files: [{
@@ -61,11 +89,30 @@ module.exports = function(grunt) {
       }
     },
 
+    copy: { 
+      build: { 
+        files: [{ 
+          expand: true, 
+          cwd: "source", 
+          src: [ 
+            "img/**", 
+            "js/**", 
+            "*.html" 
+          ], 
+          dest: "build" 
+        }] 
+      }
+    },
+
     clean: {
       gosha: [
         'gosha/img/README',
         'gosha/js/README'
       ]
+    },
+
+    clean: { 
+      build: ["build"]
     }
   });
 
@@ -78,4 +125,13 @@ module.exports = function(grunt) {
   } else {
     grunt.registerTask('gosha', ['copy:gosha', 'clean:gosha']);
   }
+
+  grunt.registerTask("build", [
+    "clean",
+    "copy",
+    "less",
+    "autoprefixer",
+    "cssmin",
+    "imagemin"
+  ]);
 };
